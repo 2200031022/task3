@@ -1,0 +1,110 @@
+/* General styling for the app */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #333;
+  font-size: 36px; /* Increased font size */
+  margin-bottom: 20px; /* Added margin below the heading */
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #666;
+}
+
+.board-row {
+  display: flex;
+  margin-bottom: 10px; /* Added margin between rows */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px; /* Added border radius */
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.square:active {
+  background-color: #ddd;
+}
+
+.square.X {
+  color: #ff4d4d;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.square.O {
+  color: #4d79ff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.square.lose {
+  background-color: #ffcccc; /* Background color for losing squares */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.new game {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px; /* Increased font size */
+  cursor: pointer;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.new game:hover {
+  background-color: #ff1a1a;
+}
+
+.new game:active {
+  background-color: #e60000;
+}
+
+.winner,
+.loser {
+  background-color: #ffff99; /* Highlighted background color for winner */
+  font-weight: bold; /* Bold font weight for winner */
+  padding: 5px 10px; /* Added padding for winner */
+  border-radius: 5px; /* Added border radius for winner */
+}
